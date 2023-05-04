@@ -6,7 +6,7 @@ This guide explains how to install the Lens Kubernetes IDE on Debian-based syste
 
 Run the following command to download and add the Lens public security key to your keyring:
 
-```
+```bash
 curl -fsSL https://downloads.k8slens.dev/keys/gpg | gpg --dearmor | sudo tee /usr/share/keyrings/lens-archive-keyring.gpg > /dev/null
 ```
 
@@ -14,14 +14,14 @@ curl -fsSL https://downloads.k8slens.dev/keys/gpg | gpg --dearmor | sudo tee /us
 
 Add the Lens repository to your /etc/apt/sources.list.d directory with the following command:
 
-```
+```bash
 echo "deb [arch=amd64 signed-by=/usr/share/keyrings/lens-archive-keyring.gpg] https://downloads.k8slens.dev/apt/debian stable main" | sudo tee /etc/apt/sources.list.d/lens.list > /dev/null
 ```
 ## Step 3: Install or update Lens Desktop
 
 Update your package lists and install Lens Desktop by running:
 
-```
+```bash
 sudo apt update
 sudo apt install lens
 ```
@@ -30,7 +30,7 @@ sudo apt install lens
 
 Launch Lens Desktop from the command line by typing:
 
-```
+```bash
 lens-desktop
 ```
 
